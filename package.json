@@ -1,0 +1,25 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gnarwall19/liri-node-app.git"
+  },
+  "author": "Michael Wolfe",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Gnarwall19/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/Gnarwall19/liri-node-app#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.83.0",
+    "twitter": "^1.7.1"
+  }
+}

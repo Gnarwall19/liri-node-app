@@ -1,0 +1,13 @@
+TWIITER
+Consumer Key (API Key)	n8YZXrglHLSbhOQNxDMmwwGWI
+Consumer Secret (API Secret)    GjANbLHn5YNFa3dyVMEncLE7016xjI1h7wHvab7JdrgC9Es9jX
+
+TWITTER - codewolfe
+Consumer Key (API Key)	MT0OSTp3rc5vnyRRQvf82nZ3E
+Consumer Secret (API Secret)	GlSYdPTkR2LBeR66JmIM9nQIp0A8QbTnDaiPstJjmPHblddxU3
+
+
+
+SPOTIFY
+Client ID   3ac93a76edf64604a3f748b6a045826e
+Client Secret   51b916e3e87a4615ad3f0663004ea208
