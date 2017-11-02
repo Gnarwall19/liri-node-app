@@ -13,19 +13,19 @@ var colors = require('colors');
 
 //User input
 var command = process.argv[2];
-//var userSelection = process.argv[3];
+var userSelection = process.argv[3];
 
 switch (command) {
     case 'my-tweets':
-        myTweets();
+        myTweets(userSelection);
         break;
 
     case 'spotify-this-song':
-        spotifySong();
+        spotifySong(userSelection);
         break;
 
     case 'movie-this':
-        movieThis();
+        movieThis(userSelection);
         break;
 
     case 'do-what-it-says':
@@ -38,7 +38,7 @@ switch (command) {
 
 /*  MY TWEETS FUNCTION */
 
-function myTweets() {
+function myTweets(twitterHandle) {
     console.log("Alright let's checkout these Tweets!!\n".blue);
 
     var client = new twitter({
@@ -49,7 +49,7 @@ function myTweets() {
     });
 
     //Allows user to input any Twitter handle
-    var twitterHandle = process.argv[3];
+    //var twitterHandle = process.argv[3];
 
     //Use codewolfe twitter handle as default
     if (!twitterHandle) {
@@ -77,10 +77,10 @@ function myTweets() {
 
 /* SPOTIFY THIS SONG FUNCTION */
 
-function spotifySong() {
+function spotifySong(songName) {
     console.log('Here is your song!\n');
     //Allows user to input song name
-    var songName = process.argv[3];
+    //var songName = process.argv[3];
 
     //API Keys
     var spotClient = new spotify({
@@ -115,9 +115,9 @@ function spotifySong() {
 
 /* MOVIE THIS FUNCTION */
 
-function movieThis() {
+function movieThis(movie) {
     //Allows user to input movie name
-    var movie = process.argv[3];
+    //var movie = process.argv[3];
 
     //Defaults if no movie is entered
     if (!movie) {
@@ -156,8 +156,12 @@ function doWhatSays() {
             command = dataSplit[0];
             action = dataSplit[1];
 
-            if (command = 'spotify-this-song') {
-                spotifySong();
+            if (command === 'spotify-this-song') {
+                spotifySong(action);
+            } else if (command === 'movie-this') {
+                movieThis(action);
+            } else if (command === 'my-tweets') {
+                myTweets(action);
             }
         }
     })
