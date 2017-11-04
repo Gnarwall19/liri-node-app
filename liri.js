@@ -84,8 +84,8 @@ function spotifySong(songName) {
 
     //API Keys
     var spotClient = new spotify({
-        id: '3ac93a76edf64604a3f748b6a045826e',
-        secret: '51b916e3e87a4615ad3f0663004ea208'
+        id: keys.spotifyKeys.id,
+        secret: keys.spotifyKeys.secret
     });
 
     //Defaults if no song is entered
@@ -131,6 +131,7 @@ function movieThis(movie) {
             var movieData = JSON.parse(body);
 
             //Log data
+            console.log(("____________________________________________________________________________________________________").blue);
             console.log('Title: '.green + movieData.Title.cyan);
             console.log('Release Year: '.green + movieData.Year.cyan);
             console.log('IMDB Rating: '.green + movieData.imdbRating.cyan);
@@ -139,6 +140,7 @@ function movieThis(movie) {
             console.log('Language: '.green + movieData.Language.cyan);
             console.log('Plot: '.green + movieData.Plot.cyan);
             console.log('Actors: '.green + movieData.Actors.cyan);
+            console.log(("____________________________________________________________________________________________________").blue);
         }
     })
 }
