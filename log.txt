@@ -1,0 +1,21 @@
+Command: movie-this Movie/Song: the land before time
+Command: movie-this Movie/Song: Star Wars: The Empire Strikes Back
+Command: movie-this Movie/Song: Star Wars
+Command: movie-this Movie/Song: Beetlejuice
+Command: movie-this Movie/Song: Fight Club
+Command: movie-this Movie/Song: Deadpool
+Command: movie-this Movie/Song: The Devil's Advocate
+Command: movie-this Movie/Song: How the Grinch Stole Christmas
+Command: spotify-this-song Movie/Song: Blue
+Command: spotify-this-song Movie/Song: I Believe in a Thing Called Love
+Command: spotify-this-song Movie/Song: I Believe in a Thing Called Love
+Command: spotify-this-song Movie/Song: All Star
+Command: spotify-this-song Movie/Song: All Star
+Command: spotify-this-song Movie/Song: Helter Skelter
+Command: spotify-this-song Movie/Song: I Believe in a Thing Called Love
+Command: movie-this Movie/Song: 300
+Command: movie-this Movie/Song: How the Grinch Stole Christmas
+Command: movie-this Movie/Song: How the Grinch Stole Christmas
+Command: movie-this Movie/Song: It
+Command: movie-this Movie/Song: Pet Sematary
+Command: movie-this Movie/Song: Rogue One

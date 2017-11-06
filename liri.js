@@ -106,9 +106,11 @@ function spotifySong(songName) {
         console.log(("____________________________________________________________________________________________________").blue);
         console.log("Person or Group - ".cyan + (data.tracks.items[0].artists[0].name).red);
         console.log("Song Name - ".cyan + (data.tracks.items[0].name).red);
-        console.log("Preview - ".cyan + (data.tracks.items[0].preview_url));
-        console.log("Album Name -  ".cyan + (data.tracks.items[0].album.name));
+        console.log("Preview - ".cyan + (data.tracks.items[0].preview_url + "").red);
+        console.log("Album Name -  ".cyan + (data.tracks.items[0].album.name + "").red);
         console.log(("____________________________________________________________________________________________________").blue);
+
+        logText();
     });
 
 }
@@ -118,29 +120,30 @@ function spotifySong(songName) {
 function movieThis(movie) {
     //Allows user to input movie name
     //var movie = process.argv[3];
-
     //Defaults if no movie is entered
     if (!movie) {
         movie = 'mr nobody';
     }
 
     //Run API call using NPM request
-    request('http://www.omdbapi.com/?t=' + movie + '&apikey=40e9cece', function (error, response, body) {
+    request('http://www.omdbapi.com/?t=' + movie + '&plot=full&tomatoes=true' + '&apikey=40e9cece', function (error, response, body) {
         if (!error && response.statusCode == 200) {
             //Creates and easy to reference variable for returned data
             var movieData = JSON.parse(body);
 
             //Log data
             console.log(("____________________________________________________________________________________________________").blue);
-            console.log('Title: '.green + movieData.Title.cyan);
-            console.log('Release Year: '.green + movieData.Year.cyan);
-            console.log('IMDB Rating: '.green + movieData.imdbRating.cyan);
-            console.log('Rotten Tomatoes Rating: '.green + movieData.Ratings[1].Value.cyan);
-            console.log('Production Country: '.green + movieData.Country.cyan);
-            console.log('Language: '.green + movieData.Language.cyan);
-            console.log('Plot: '.green + movieData.Plot.cyan);
-            console.log('Actors: '.green + movieData.Actors.cyan);
+            console.log('Title: '.green + (movieData.Title).cyan);
+            console.log('Release Year: '.green + (movieData.Year).cyan);
+            console.log('IMDB Rating: '.green + (movieData.imdbRating).cyan);
+            console.log('Rotten Tomatoes Rating: '.green + (movieData.Ratings[1].Value).cyan);
+            console.log('Production Country: '.green + (movieData.Country).cyan);
+            console.log('Language: '.green + (movieData.Language).cyan);
+            console.log('Plot: '.green + (movieData.Plot).cyan);
+            console.log('Actors: '.green + (movieData.Actors).cyan);
             console.log(("____________________________________________________________________________________________________").blue);
+
+            logText();
         }
     })
 }
@@ -165,6 +168,17 @@ function doWhatSays() {
             } else if (command === 'my-tweets') {
                 myTweets(action);
             }
+            logText();
+        }
+    })
+}
+
+/* Log Text */
+
+function logText() {
+    fs.appendFile('log.txt', 'Command: ' + command + ' ' + 'Movie/Song: ' + userSelection + '\n', function (err) {
+        if (err) {
+            console.log(err);
         }
     })
 }
